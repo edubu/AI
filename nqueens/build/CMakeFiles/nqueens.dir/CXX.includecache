@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/edubu/AI/nqueens/Agent.h
+iostream
+-
+vector
+-
+cmath
+-
+Problem.h
+/home/edubu/AI/nqueens/Problem.h
+
+/home/edubu/AI/nqueens/Problem.h
+string
+-
+iostream
+-
+vector
+-
+
+/home/edubu/AI/nqueens/main.cpp
+iostream
+-
+vector
+-
+fstream
+-
+string
+-
+filesystem
+-
+unistd.h
+-
+Problem.h
+/home/edubu/AI/nqueens/Problem.h
+Agent.h
+/home/edubu/AI/nqueens/Agent.h
+

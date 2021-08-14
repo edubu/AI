@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/edubu/AI/nqueens/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/nqueens.dir/main.cpp.o -c /home/edubu/AI/nqueens/main.cpp",
+  "file": "/home/edubu/AI/nqueens/main.cpp"
+},
+{
+  "directory": "/home/edubu/AI/nqueens/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/nqueens.dir/Agent.cpp.o -c /home/edubu/AI/nqueens/Agent.cpp",
+  "file": "/home/edubu/AI/nqueens/Agent.cpp"
+},
+{
+  "directory": "/home/edubu/AI/nqueens/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/nqueens.dir/Problem.cpp.o -c /home/edubu/AI/nqueens/Problem.cpp",
+  "file": "/home/edubu/AI/nqueens/Problem.cpp"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/nqueens.dir/main.cpp.o CMakeFiles/nqueens.dir/Agent.cpp.o CMakeFiles/nqueens.dir/Problem.cpp.o  -o nqueens 

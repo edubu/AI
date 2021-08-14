@@ -22,7 +22,7 @@ int main(int argc, char ** argv){
 
     Result result;
     vector<Result> results;
-    for(int i = 0; i < 10; ++i){
+    for(int i = 0; i < 100; ++i){
         // Create random initial state
         Board board;
         randomize(board);
@@ -38,7 +38,8 @@ int main(int argc, char ** argv){
         result = agent.hillclimb_rr();
         results.push_back(result);
 
-        result = agent.simulated_annealing(10.0, 0.99, 0.001);
+        // InitialTemp, Decay, MinimumTemp, NumIterations
+        result = agent.simulated_annealing(10.0, 0.90, 0.001, 10);
         results.push_back(result);
 
         // // Optimal

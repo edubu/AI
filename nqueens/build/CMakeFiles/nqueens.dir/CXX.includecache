@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/edubu/AI/nqueens/Agent.cpp
+Agent.h
+/home/edubu/AI/nqueens/Agent.h
+chrono
+-
+algorithm
+-
+
 /home/edubu/AI/nqueens/Agent.h
 iostream
 -
@@ -23,22 +31,4 @@ iostream
 -
 vector
 -
-
-/home/edubu/AI/nqueens/main.cpp
-iostream
--
-vector
--
-fstream
--
-string
--
-filesystem
--
-unistd.h
--
-Problem.h
-/home/edubu/AI/nqueens/Problem.h
-Agent.h
-/home/edubu/AI/nqueens/Agent.h
 

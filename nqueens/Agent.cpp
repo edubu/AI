@@ -156,7 +156,7 @@ Result Agent::hillclimb_rr(){
     return result;
 }
 
-Result Agent::simulated_annealing(double initialTemp, double decay, double threshold){
+Result Agent::simulated_annealing(double initialTemp, double decay, double threshold, int numI){
     //Start timer
     auto start = high_resolution_clock::now();
     Result result;
@@ -167,30 +167,31 @@ Result Agent::simulated_annealing(double initialTemp, double decay, double thres
     double temp = initialTemp;
     double temp_min = threshold;
     double alpha = decay;
+    int numIters = numI;
     bool foundSolution = false;
     result.solved = 0;
 
     while(temp > temp_min && !foundSolution){
-
-        //Choose random successor
-        Board *randomSuccessor = generateRandomSuccessor(currNode);
-        if(randomSuccessor->h_score == 0){
-            foundSolution = true;
-            currNode = randomSuccessor;
-            result.solved = 1;
-            break;
-        }
-
-        int change = currNode->h_score - randomSuccessor->h_score;
-
-        if(change > 0)
-            currNode = randomSuccessor;
-        else{
-            double prob = exp((double)change/temp);
-            if(prob > rand())
+        for(int i = 0; i < numIters; i++){
+            //Choose random successor
+            Board *randomSuccessor = generateRandomSuccessor(currNode);
+            if(randomSuccessor->h_score == 0){
+                foundSolution = true;
                 currNode = randomSuccessor;
-        }
+                result.solved = 1;
+                break;
+            }
 
+            int change = currNode->h_score - randomSuccessor->h_score;
+
+            if(change > 0)
+                currNode = randomSuccessor;
+            else{
+                double prob = exp((double)(-change)/temp);
+                if(prob < rand()/double(RAND_MAX))
+                    currNode = randomSuccessor;
+            }
+        }
         temp *= alpha;
     }
 

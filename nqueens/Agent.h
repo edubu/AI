@@ -26,7 +26,7 @@ class Agent {
         Result hillclimb_sa(Board *startingState);
         Result hillclimb_fc();
         Result hillclimb_rr();
-        Result simulated_annealing(double initialTemp, double decay, double threshold);
+        Result simulated_annealing(double initialTemp, double decay, double threshold, int numI);
         //Result astar();
 
     private:

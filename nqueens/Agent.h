@@ -7,6 +7,7 @@ using namespace std;
 #include <vector>
 #include <cmath>
 #include "Problem.h"
+#include "Astar.h"
 
 struct CompareBoardH{
     bool operator()(const Board *b1, const Board *b2){
@@ -17,9 +18,13 @@ struct CompareBoardH{
     }   
 };
 
+
 class Agent {
     public:
         Agent(Board board);
+        ~Agent(){
+            return;
+        }
 
         // Accessible Member functions
         Result hillclimb_sa();
@@ -27,7 +32,7 @@ class Agent {
         Result hillclimb_fc();
         Result hillclimb_rr();
         Result simulated_annealing(double initialTemp, double decay, double threshold, int numI);
-        //Result astar();
+        Result astar();
 
     private:
         Board initialState;

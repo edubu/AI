@@ -547,6 +547,33 @@ Agent.cpp.s:
 	$(MAKE) -f CMakeFiles/nqueens.dir/build.make CMakeFiles/nqueens.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
 
+Astar.o: Astar.cpp.o
+
+.PHONY : Astar.o
+
+# target to build an object file
+Astar.cpp.o:
+	$(MAKE) -f CMakeFiles/nqueens.dir/build.make CMakeFiles/nqueens.dir/Astar.cpp.o
+.PHONY : Astar.cpp.o
+
+Astar.i: Astar.cpp.i
+
+.PHONY : Astar.i
+
+# target to preprocess a source file
+Astar.cpp.i:
+	$(MAKE) -f CMakeFiles/nqueens.dir/build.make CMakeFiles/nqueens.dir/Astar.cpp.i
+.PHONY : Astar.cpp.i
+
+Astar.s: Astar.cpp.s
+
+.PHONY : Astar.s
+
+# target to generate assembly for a file
+Astar.cpp.s:
+	$(MAKE) -f CMakeFiles/nqueens.dir/build.make CMakeFiles/nqueens.dir/Astar.cpp.s
+.PHONY : Astar.cpp.s
+
 Problem.o: Problem.cpp.o
 
 .PHONY : Problem.o
@@ -644,6 +671,9 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
+	@echo "... Astar.o"
+	@echo "... Astar.i"
+	@echo "... Astar.s"
 	@echo "... Problem.o"
 	@echo "... Problem.i"
 	@echo "... Problem.s"

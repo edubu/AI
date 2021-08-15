@@ -13,5 +13,10 @@
   "directory": "/home/edubu/AI/nqueens/build",
   "command": "/usr/bin/c++    -g   -o CMakeFiles/nqueens.dir/Problem.cpp.o -c /home/edubu/AI/nqueens/Problem.cpp",
   "file": "/home/edubu/AI/nqueens/Problem.cpp"
+},
+{
+  "directory": "/home/edubu/AI/nqueens/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/nqueens.dir/Astar.cpp.o -c /home/edubu/AI/nqueens/Astar.cpp",
+  "file": "/home/edubu/AI/nqueens/Astar.cpp"
 }
 ]

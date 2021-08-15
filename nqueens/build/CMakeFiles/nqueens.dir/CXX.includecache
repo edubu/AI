@@ -23,6 +23,14 @@ cmath
 -
 Problem.h
 /home/edubu/AI/nqueens/Problem.h
+Astar.h
+/home/edubu/AI/nqueens/Astar.h
+
+/home/edubu/AI/nqueens/Astar.h
+Agent.h
+/home/edubu/AI/nqueens/Agent.h
+Problem.h
+/home/edubu/AI/nqueens/Problem.h
 
 /home/edubu/AI/nqueens/Problem.h
 string

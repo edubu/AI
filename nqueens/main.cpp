@@ -38,13 +38,13 @@ int main(int argc, char ** argv){
         result = agent.hillclimb_rr();
         results.push_back(result);
 
-        // InitialTemp, Decay, MinimumTemp, NumIterations
+        //InitialTemp, Decay, MinimumTemp, NumIterations
         result = agent.simulated_annealing(10.0, 0.90, 0.001, 10);
         results.push_back(result);
 
-        // // Optimal
-        // result = agent.astar();
-        // results.push_back(result);
+        // Optimal
+        result = agent.astar();
+        results.push_back(result);
     }
 
     saveResults(results, outFileName);

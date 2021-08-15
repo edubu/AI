@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nqueens.dir/Agent.cpp.o"
+  "CMakeFiles/nqueens.dir/Astar.cpp.o"
   "CMakeFiles/nqueens.dir/Problem.cpp.o"
   "CMakeFiles/nqueens.dir/main.cpp.o"
   "nqueens"

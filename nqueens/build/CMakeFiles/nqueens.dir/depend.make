@@ -3,12 +3,19 @@
 
 CMakeFiles/nqueens.dir/Agent.cpp.o: ../Agent.cpp
 CMakeFiles/nqueens.dir/Agent.cpp.o: ../Agent.h
+CMakeFiles/nqueens.dir/Agent.cpp.o: ../Astar.h
 CMakeFiles/nqueens.dir/Agent.cpp.o: ../Problem.h
+
+CMakeFiles/nqueens.dir/Astar.cpp.o: ../Agent.h
+CMakeFiles/nqueens.dir/Astar.cpp.o: ../Astar.cpp
+CMakeFiles/nqueens.dir/Astar.cpp.o: ../Astar.h
+CMakeFiles/nqueens.dir/Astar.cpp.o: ../Problem.h
 
 CMakeFiles/nqueens.dir/Problem.cpp.o: ../Problem.cpp
 CMakeFiles/nqueens.dir/Problem.cpp.o: ../Problem.h
 
 CMakeFiles/nqueens.dir/main.cpp.o: ../Agent.h
+CMakeFiles/nqueens.dir/main.cpp.o: ../Astar.h
 CMakeFiles/nqueens.dir/main.cpp.o: ../Problem.h
 CMakeFiles/nqueens.dir/main.cpp.o: ../main.cpp
 

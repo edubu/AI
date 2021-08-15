@@ -25,12 +25,20 @@ Result Agent::hillclimb_sa(){
         sort(children.begin(), children.end(), compb);
 
         Board *bestNode = children.back();
-        if(bestNode->h_score <= currNode->h_score)
+        children.pop_back();
+        for(int i = 0; i < children.size(); ++i){
+            delete children[i];
+        }
+
+        if(bestNode->h_score <= currNode->h_score){
+            delete bestNode;
             break;
+        }
         else {
             currNode = bestNode;
-            if(goalTest(currNode))
+            if(goalTest(currNode)){
                 break;
+            }
         }
     }
 
@@ -38,7 +46,6 @@ Result Agent::hillclimb_sa(){
         result.solved = 1;
     else 
         result.solved = 0;
-
 
     //End timer
     auto stop = high_resolution_clock::now();
@@ -65,12 +72,20 @@ Result Agent::hillclimb_sa(Board *startingState){
         sort(children.begin(), children.end(), compb);
 
         Board *bestNode = children.back();
-        if(bestNode->h_score <= currNode->h_score)
+        children.pop_back();
+        for(int i = 0; i < children.size(); ++i){
+            delete children[i];
+        }
+
+        if(bestNode->h_score <= currNode->h_score){
+            delete bestNode;
             break;
+        }
         else {
             currNode = bestNode;
-            if(goalTest(currNode))
+            if(goalTest(currNode)){
                 break;
+            }
         }
     }
 
@@ -103,8 +118,9 @@ Result Agent::hillclimb_fc(){
         Board *randomSuccessor = generateRandomSuccessor(currNode);
         if(randomSuccessor->h_score < currNode->h_score){
             currNode = randomSuccessor;
-            if(goalTest(currNode))
+            if(goalTest(currNode)){
                 break;
+            }
             tries = 0;
         }
         else {
@@ -184,12 +200,14 @@ Result Agent::simulated_annealing(double initialTemp, double decay, double thres
 
             int change = currNode->h_score - randomSuccessor->h_score;
 
-            if(change > 0)
+            if(change > 0){
                 currNode = randomSuccessor;
+            }
             else{
                 double prob = exp((double)(-change)/temp);
-                if(prob < rand()/double(RAND_MAX))
+                if(prob < rand()/double(RAND_MAX)){
                     currNode = randomSuccessor;
+                }
             }
         }
         temp *= alpha;
@@ -206,4 +224,8 @@ Result Agent::simulated_annealing(double initialTemp, double decay, double thres
     result.exec_time = (double)duration.count() / 1000.0;
 
     return result;
+}
+
+Result Agent::astar(){
+    return astar_helper(&initialState);
 }

@@ -4,7 +4,7 @@ project(nqueens VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(nqueens main.cpp Agent.cpp Problem.cpp)
+add_executable(nqueens main.cpp Agent.cpp Problem.cpp Astar.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

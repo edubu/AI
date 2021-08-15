@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edubu/AI/nqueens/Agent.cpp" "/home/edubu/AI/nqueens/build/CMakeFiles/nqueens.dir/Agent.cpp.o"
+  "/home/edubu/AI/nqueens/Astar.cpp" "/home/edubu/AI/nqueens/build/CMakeFiles/nqueens.dir/Astar.cpp.o"
   "/home/edubu/AI/nqueens/Problem.cpp" "/home/edubu/AI/nqueens/build/CMakeFiles/nqueens.dir/Problem.cpp.o"
   "/home/edubu/AI/nqueens/main.cpp" "/home/edubu/AI/nqueens/build/CMakeFiles/nqueens.dir/main.cpp.o"
   )

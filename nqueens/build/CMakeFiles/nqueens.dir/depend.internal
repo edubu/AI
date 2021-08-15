@@ -4,11 +4,18 @@
 CMakeFiles/nqueens.dir/Agent.cpp.o
  /home/edubu/AI/nqueens/Agent.cpp
  /home/edubu/AI/nqueens/Agent.h
+ /home/edubu/AI/nqueens/Astar.h
+ /home/edubu/AI/nqueens/Problem.h
+CMakeFiles/nqueens.dir/Astar.cpp.o
+ /home/edubu/AI/nqueens/Agent.h
+ /home/edubu/AI/nqueens/Astar.cpp
+ /home/edubu/AI/nqueens/Astar.h
  /home/edubu/AI/nqueens/Problem.h
 CMakeFiles/nqueens.dir/Problem.cpp.o
  /home/edubu/AI/nqueens/Problem.cpp
  /home/edubu/AI/nqueens/Problem.h
 CMakeFiles/nqueens.dir/main.cpp.o
  /home/edubu/AI/nqueens/Agent.h
+ /home/edubu/AI/nqueens/Astar.h
  /home/edubu/AI/nqueens/Problem.h
  /home/edubu/AI/nqueens/main.cpp

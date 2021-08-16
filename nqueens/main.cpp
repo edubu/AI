@@ -69,10 +69,13 @@ void saveResults(vector<Result> &results, string outFileName){
 }
 
 void showResults(string scriptFilename, string outFilename){
-    // char tmp[256];
-    // getcwd(tmp, 256);
-    // string cpath(tmp);
-    //cpath += scriptFileName;
+    char tmp[256];
+    getcwd(tmp, 256);
+    string cpath(tmp);
+    string endDirectory = cpath.substr(cpath.length() - 5, 5);
+    if(endDirectory == "build"){
+        scriptFilename = "../" + scriptFilename;
+    }
 
     string command = "python3 ";
     command += scriptFilename;

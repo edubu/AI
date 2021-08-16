@@ -1,1 +1,0 @@
-/bin/g++-9  -g  -rdynamic CMakeFiles/8puzzle.dir/main.cpp.o CMakeFiles/8puzzle.dir/astar.cpp.o CMakeFiles/8puzzle.dir/problem.cpp.o CMakeFiles/8puzzle.dir/puzzle.cpp.o  -o 8puzzle 

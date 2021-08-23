@@ -1,23 +1,17 @@
-from PyQt5.QtWidgets import *
-from PyQt5 import QtCore, QtGui
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
+# from PyQt5.QtWidgets import *
+# from PyQt5 import QtCore, QtGui
+# from PyQt5.QtGui import *
+# from PyQt5.QtCore import *
 from enum import Enum
+from ui_manager import *
 import sys
 
 class Agent(Enum):
     HUMAN = 0
     BOT = 1
 
-class Piece(Enum):
-    NONE = 0
-    WHITE = 1
-    BLACK = 2
-    WHITE_KING = 3
-    BLACK_KING = 4
-
-class GameManager(QMainWindow):
-    def __init__(self, agent1, agent2):
+class GameManager():
+    def __init__(self, agent1="human", agent2="human"):
         super().__init__()
 
         # identify agent types
@@ -41,17 +35,8 @@ class GameManager(QMainWindow):
                       [Piece.BLACK, Piece.NONE, Piece.BLACK, Piece.NONE, Piece.BLACK, Piece.NONE, Piece.BLACK, Piece.NONE]]
 
         # Create UI
-        self.setup_ui()
+        self.ui = CheckersUI(self.state)
+        #self.ui.set_state(self.state)
 
         # Start the game
-        #self.start_game()
-
-
-    def setup_ui(self):
-        self.setWindowTitle("Checkers")
-        self.setGeometry(100, 100, 500, 700)
-
-        #show components
-        self.show()
-
-
+        # self.start_game()

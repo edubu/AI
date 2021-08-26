@@ -5,24 +5,29 @@
 from enum import Enum
 from ui_manager import *
 import sys
+from piece import Piece
 
 class Agent(Enum):
     HUMAN = 0
     BOT = 1
 
 class GameManager():
-    def __init__(self, agent1="human", agent2="human"):
+    def __init__(self, agent0="human", agent1="human"):
         super().__init__()
 
         # identify agent types
+        if agent0 == "human":
+            self.agent0 = Agent.HUMAN
+        elif agent0 == "bot":
+            self.agent0 = Agent.BOT
         if agent1 == "human":
             self.agent1 = Agent.HUMAN
         elif agent1 == "bot":
             self.agent1 = Agent.BOT
-        if agent2 == "human":
-            self.agent2 = Agent.HUMAN
-        elif agent2 == "bot":
-            self.agent2 = Agent.BOT
+
+        self.agents = []
+        if agent0 == Agent.HUMAN:
+            self.agents.append()
 
         # create initial state
         self.state = [[Piece.NONE, Piece.WHITE, Piece.NONE, Piece.WHITE, Piece.NONE, Piece.WHITE, Piece.NONE, Piece.WHITE],
@@ -36,7 +41,20 @@ class GameManager():
 
         # Create UI
         self.ui = CheckersUI(self.state)
-        #self.ui.set_state(self.state)
 
         # Start the game
-        # self.start_game()
+        self.startGame()
+
+    def startGame(self):
+        # White: 0; Black: 1
+        turn = 0
+        isActive = True
+
+        while isActive:
+            self.getAction(turn)
+
+    def getAction(self, turn):
+        if turn == 0:
+            if self.agent0 == Agent.BOT:
+
+

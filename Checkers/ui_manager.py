@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from enum import Enum
 from piece import Piece
-from button import Button
 
 class CheckersUI(QWidget):
     def __init__(self, state):
@@ -57,16 +56,13 @@ class CheckersUI(QWidget):
 
         # Initialize buttons
         self.button_size = 50
-        self.cells = []
+        self.btns = []
         startWhite = True
         for x in range(8):
             temp = []
             startWhite = not startWhite
             for y in range(8):
-                btn_center_x = self.gridLeftMargin + ((y - 1) * self.button_size) + (self.button_size / 2)
-                btn_center_y = self.gridTopStart + ((x-1) * self.button_size) + (self.button_size / 2)
-                btn = Button(state[x][y], btn_center_x, btn_center_y)
-                # btn = QPushButton()
+                btn = QPushButton()
                 btn.setFixedHeight(self.button_size)
                 btn.setFixedWidth(self.button_size)
                 if startWhite and y % 2 == 1:
@@ -85,17 +81,35 @@ class CheckersUI(QWidget):
                     btn.setStyleSheet(
                         "background-color: rgb(124,100,68)"
                     )
-
                 temp.append(btn)
                 self.gridLayout.addWidget(btn, x, y, 1, 1)
-            self.cells.append(temp)
-
+            self.btns.append(temp)
 
         # Initial state
         self.label.setText("White Turn")
+        self.updateState()
 
         # Show UI
         self.show()
+
+    def updateState(self):
+        for i in range(8):
+            for j in range(8):
+                if self.state[i][j] == Piece.NONE:
+                    self.btns[i][j].setIcon(QIcon('images/empty.png'))
+                    self.btns[i][j].setIconSize(QSize(30, 30))
+                elif self.state[i][j] == Piece.WHITE:
+                    self.btns[i][j].setIcon(QIcon('images/white.png'))
+                    self.btns[i][j].setIconSize(QSize(30, 30))
+                elif self.state[i][j] == Piece.WHITE_KING:
+                    self.btns.setIcon(QIcon('images/king_white.png'))
+                    self.btns[i][j].setIconSize(QSize(30, 30))
+                elif self.state[i][j] == Piece.BLACK:
+                    self.btns[i][j].setIcon(QIcon('images/black.png'))
+                    self.btns[i][j].setIconSize(QSize(30, 30))
+                elif self.state[i][j] == Piece.BLACK_KING:
+                    self.btns[i][j].setIcon(QIcon('images/king_black.png'))
+                    self.btns[i][j].setIconSize(QSize(30, 30))
 
     # def paintEvent(self, e):
     #     qp = QPainter()
@@ -123,4 +137,8 @@ class CheckersUI(QWidget):
 
     def set_state(self, state):
         self.state = state
+
+    def set_and_update(self, state):
+        self.state = state
+        self.updateState()
 
